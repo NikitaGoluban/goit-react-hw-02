@@ -1,23 +1,36 @@
 {
+  // Ustawienia dla konfiguracji Vite, która działa w Node.js.
   "compilerOptions": {
+    // Pomocniczy plik przyspieszający kolejne sprawdzenia konfiguracji.
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    // Przyjmujemy obsługę współczesnej składni JavaScript.
     "target": "es2023",
+    // Tutaj potrzebujemy typów JavaScript; kod nie korzysta z elementów strony.
     "lib": ["ES2023"],
+    // Udostępniamy typy środowiska Node.js.
     "types": ["node"],
+    // Pomijamy sprawdzanie wnętrza plików deklaracji typów bibliotek.
     "skipLibCheck": true,
 
-    /* Bundler mode */
+    /* Ustawienia modułów i importów zgodne ze środowiskiem Node.js. */
     "module": "nodenext",
+    // Zezwalamy na rozszerzenia TypeScript w ścieżkach importów.
     "allowImportingTsExtensions": true,
+    // Importy typów oznaczamy jawnie jako import type.
     "verbatimModuleSyntax": true,
+    // Każdy plik jest osobnym modułem.
     "moduleDetection": "force",
+    // TypeScript jedynie sprawdza kod; nie zapisuje własnych plików JavaScript.
     "noEmit": true,
 
-    /* Linting */
+    /* Kontrole wykrywające nieużywane elementy i niektóre pomyłki. */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    // Typy można usunąć bez tworzenia dodatkowego kodu wykonującego się w aplikacji.
     "erasableSyntaxOnly": true,
+    // Gałęzie switch nie mogą przypadkowo przechodzić do następnej gałęzi.
     "noFallthroughCasesInSwitch": true
   },
+  // Ta konfiguracja obejmuje tylko ustawienia Vite.
   "include": ["vite.config.ts"]
 }

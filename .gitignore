@@ -1,4 +1,5 @@
-# Logs
+# Git pomija poniższe pliki i foldery, zamiast wysyłać je do repozytorium.
+# Dzienniki działania narzędzi mogą powstawać automatycznie na danym komputerze.
 logs
 *.log
 npm-debug.log*
@@ -7,12 +8,16 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Biblioteki pobieramy przez npm install lub npm ci, dlatego nie dodajemy ich do Gita.
 node_modules
+# Pliki produkcyjne powstają po npm run build i są odtwarzane na Vercel.
 dist
 dist-ssr
+# Pomijamy pliki przeznaczone wyłącznie do lokalnej konfiguracji.
 *.local
 
-# Editor directories and files
+# Lokalne ustawienia edytorów i pliki pomocnicze systemu.
+# Znak ! oznacza wyjątek: extensions.json można zapisać w repozytorium.
 .vscode/*
 !.vscode/extensions.json
 .idea

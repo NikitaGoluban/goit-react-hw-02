@@ -1,20 +1,25 @@
+/* Karta z podsumowaniem ocen: tło, ramka, zaokrąglenie i cień. */
 .container {
   background-color: #f9f9f9;
   border: 1px solid #dcdfe3;
   border-radius: 4px;
+  /* Odstęp wewnątrz karty oraz jej maksymalna szerokość. */
   padding: 16px;
   max-width: 300px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
+/* Jeden wiersz statystyk, np. „Good: 3”. */
 .stat {
   font-size: 15px;
   color: #2d2d2d;
   margin: 8px 0;
+  /* Flex oddziela etykietę po lewej stronie od wyniku po prawej. */
   display: flex;
   justify-content: space-between;
 }
 
+/* Liczby wewnątrz strong wyróżniamy grubością i niebieskim kolorem. */
 .stat strong {
   font-weight: 600;
   color: #0a66c2;

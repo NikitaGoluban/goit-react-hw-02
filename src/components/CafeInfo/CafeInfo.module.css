@@ -1,23 +1,31 @@
+/* Biała karta zawierająca nazwę kawiarni i instrukcję głosowania. */
 .container {
+  /* Wewnętrzne odstępy: 32px w pionie i 24px w poziomie. */
   padding: 32px 24px;
   background-color: #ffffff;
+  /* Cienka ramka, zaokrąglone rogi i delikatny cień oddzielają kartę od tła. */
   border: 1px solid #e1e4e8;
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
+/* Wygląd głównego nagłówka h1. */
 .title {
+  /* Usuwamy domyślne marginesy nagłówka. Niżej dodajemy odstęp pod tytułem. */
   margin: 0;
+  /* Rozmiar, kolor i grubość tekstu tytułu. */
   font-size: 36px;
   color: #1a1a1a;
   font-weight: 600;
   margin-bottom: 16px;
 }
 
+/* Akapit z krótką instrukcją wystawiania ocen. */
 .description {
   margin: 0;
   font-size: 16px;
   color: #4b4b4b;
+  /* Ograniczamy długość wierszy, a line-height zwiększa odstęp między liniami. */
   max-width: 600px;
   line-height: 1.6;
 }

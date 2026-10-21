@@ -1,7 +1,12 @@
 {
+  // Główna konfiguracja łączy dwa projekty TypeScript opisane poniżej.
+  // TypeScript dopuszcza komentarze w swoich plikach tsconfig.json.
   "files": [],
+  // Kod aplikacji i konfiguracja Vite mają osobne ustawienia środowiska.
   "references": [
+    // Komponenty i pozostały kod z folderu src, uruchamiane w przeglądarce.
     { "path": "./tsconfig.app.json" },
+    // Plik vite.config.ts uruchamiany przez narzędzia w Node.js.
     { "path": "./tsconfig.node.json" }
   ]
 }

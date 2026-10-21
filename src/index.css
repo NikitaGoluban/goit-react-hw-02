@@ -1,14 +1,23 @@
+/* :root odnosi się do głównego elementu dokumentu HTML. */
+/* Te ustawienia są domyślnie dziedziczone przez elementy strony. */
 :root {
+  /* Używamy Arial, a gdy jest niedostępny, innej czcionki bezszeryfowej. */
   font-family: Arial, sans-serif;
+  /* Domyślny kolor tekstu i białe tło strony. */
   color: #1a1a1a;
   background-color: #ffffff;
+  /* Wyłączamy sztuczne tworzenie brakujących odmian czcionki. */
   font-synthesis: none;
+  /* Ustawienia renderowania i wygładzania pomagają w wyświetlaniu tekstu. */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Podstawowe ustawienia widocznej części dokumentu. */
 body {
+  /* Usuwamy domyślny margines wokół strony. */
   margin: 0;
+  /* Strona ma co najmniej 320px szerokości. */
   min-width: 320px;
 }

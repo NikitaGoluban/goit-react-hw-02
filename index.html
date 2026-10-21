@@ -1,17 +1,25 @@
 <!doctype html>
+<!-- lang="en" określa język tekstów wyświetlanych w aplikacji. -->
 <html lang="en">
   <head>
+    <!-- UTF-8 pozwala poprawnie wyświetlać znaki, np. é w słowie Café. -->
     <meta charset="UTF-8" />
+    <!-- Ikona kawiarni wyświetlana na karcie przeglądarki. -->
     <link rel="icon" type="image/svg+xml" href="/cafe.svg" />
+    <!-- Dopasowanie szerokości strony do ekranu urządzenia, np. telefonu. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Krótki opis strony, który mogą wykorzystać wyszukiwarki. -->
     <meta
       name="description"
       content="Rate the service at Sip Happens Café and see the feedback statistics."
     />
+    <!-- Tytuł widoczny na karcie przeglądarki. -->
     <title>Sip Happens Café</title>
   </head>
   <body>
+    <!-- W tym elemencie main.tsx umieszcza aplikację React. -->
     <div id="root"></div>
+    <!-- Punkt startowy aplikacji. Vite przetwarza ten plik TypeScript. -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+# Prettier pomija biblioteki i wygenerowany kod aplikacji.
 node_modules
 dist
+# Ten plik jest zarządzany automatycznie przez npm.
 package-lock.json

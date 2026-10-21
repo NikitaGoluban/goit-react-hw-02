@@ -1,34 +1,46 @@
+/* Kontener ustawia przyciski obok siebie z odstępami. */
 .container {
   display: flex;
   gap: 8px;
+  /* Jeśli brakuje miejsca, przyciski przechodzą do następnego wiersza. */
   flex-wrap: wrap;
 }
 
+/* Wspólny wygląd wszystkich przycisków ocen i przycisku Reset. */
 .button {
+  /* Wewnętrzny odstęp oddziela napis od krawędzi przycisku. */
   padding: 10px 22px;
+  /* Niebieskie tło, biały tekst i ramka w kolorze tła. */
   background-color: #0a66c2;
   color: #fff;
   border: 1px solid #0a66c2;
+  /* Zaokrąglone rogi oraz rozmiar i grubość tekstu. */
   border-radius: 4px;
   font-size: 16px;
   font-weight: 500;
+  /* Po najechaniu kursor zmienia się w dłoń. */
   cursor: pointer;
+  /* Zmiana koloru tła i ramki trwa 0,2 sekundy, dzięki czemu jest płynna. */
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease;
+  /* Każdy przycisk ma co najmniej 120px szerokości. */
   min-width: 120px;
 }
 
+/* :hover określa wygląd przycisku, gdy znajduje się nad nim kursor. */
 .button:hover {
   background-color: #004182;
   border-color: #003060;
 }
 
+/* Dodatkowa klasa zastępuje niebieski kolor przycisku Reset czerwonym. */
 .reset {
   background-color: #dc3545;
   border-color: #dc3545;
 }
 
+/* Ciemniejszy czerwony kolor po najechaniu na Reset. */
 .reset:hover {
   background-color: #bb2d3b;
   border-color: #b02a37;

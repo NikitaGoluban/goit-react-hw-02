@@ -1,8 +1,13 @@
+/* Główny kontener obejmuje nagłówek, przyciski oraz statystyki lub komunikat. */
 .app {
+  /* 100vh to wysokość okna przeglądarki. Kontener ma co najmniej taką wysokość. */
   min-height: 100vh;
+  /* Odstęp wewnętrzny: 40px u góry i na dole, 20px po bokach. */
   padding: 40px 20px;
+  /* Ograniczamy szerokość i ustawiamy kontener na środku strony. */
   max-width: 600px;
   margin: 0 auto;
+  /* Flex układa elementy w kolumnie, a gap ustawia odstępy między nimi. */
   display: flex;
   flex-direction: column;
   gap: 32px;

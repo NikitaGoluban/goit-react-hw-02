@@ -1,26 +1,45 @@
 {
+  // Ustawienia sprawdzania kodu aplikacji działającej w przeglądarce.
   "compilerOptions": {
+    // Plik pomocniczy przyspieszający kolejne sprawdzenia TypeScript.
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    // Wersja JavaScript przyjmowana jako docelowa dla kodu TypeScript.
     "target": "es2023",
+    // Typy standardowego JavaScript i elementów strony, np. document.
     "lib": ["ES2023", "DOM"],
+    // Używamy składni modułów import i export.
     "module": "esnext",
+    // Dodajemy typy Vite, m.in. obsługę importów modułów CSS.
     "types": ["vite/client"],
+    // Dopuszczamy importy plików o innych rozszerzeniach, gdy mają deklaracje typów.
     "allowArbitraryExtensions": true,
+    // Pomijamy sprawdzanie wnętrza plików deklaracji typów bibliotek.
     "skipLibCheck": true,
 
-    /* Bundler mode */
+    /* Współpraca TypeScript z Vite, które przygotowuje pliki dla przeglądarki. */
+    // Szukamy importowanych modułów zgodnie z zasadami narzędzia budującego.
     "moduleResolution": "bundler",
+    // Pozwalamy podawać rozszerzenia .ts i .tsx w ścieżkach importów.
     "allowImportingTsExtensions": true,
+    // Jawne import type oddziela typy od importów potrzebnych podczas działania.
     "verbatimModuleSyntax": true,
+    // Każdy plik traktujemy jako osobny moduł.
     "moduleDetection": "force",
+    // TypeScript sprawdza kod, a pliki wynikowe tworzy Vite.
     "noEmit": true,
+    // JSX jest przetwarzany z użyciem współczesnego mechanizmu Reacta.
     "jsx": "react-jsx",
 
-    /* Linting */
+    /* Dodatkowe kontrole pomagające wykrywać pomyłki w kodzie. */
+    // Zgłaszamy nieużywane zmienne i importy.
     "noUnusedLocals": true,
+    // Zgłaszamy nieużywane parametry funkcji.
     "noUnusedParameters": true,
+    // Używamy składni TypeScript, której typy można usunąć bez dodatkowego kodu.
     "erasableSyntaxOnly": true,
+    // Chronimy przed przypadkowym przejściem do kolejnej gałęzi instrukcji switch.
     "noFallthroughCasesInSwitch": true
   },
+  // Sprawdzamy pliki aplikacji znajdujące się w folderze src.
   "include": ["src"]
 }

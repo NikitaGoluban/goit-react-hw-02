@@ -1,5 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Rysunek używa układu współrzędnych 32 na 32 jednostki. -->
+  <!-- Niebieski kwadrat z zaokrąglonymi rogami tworzy tło ikony. -->
   <rect width="32" height="32" rx="6" fill="#0a66c2" />
+  <!-- Wypełniona białym kolorem ścieżka rysuje kształt filiżanki. -->
   <path d="M8 12h14v9a5 5 0 0 1-5 5h-4a5 5 0 0 1-5-5z" fill="#fff" />
+  <!-- Druga ścieżka rysuje biały uchwyt i dwie kreski nad filiżanką. -->
   <path d="M22 14h2a3 3 0 0 1 0 6h-2M13 5v3M18 5v3" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" />
 </svg>
