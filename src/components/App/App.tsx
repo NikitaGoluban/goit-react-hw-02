@@ -7,23 +7,44 @@ import VoteStats from '../VoteStats/VoteStats';
 import css from './App.module.css';
 
 export default function App() {
-  const [votes, setVotes] = useState<Votes>({ good: 0, neutral: 0, bad: 0 });
+  const votesState = useState<Votes>({ good: 0, neutral: 0, bad: 0 });
+  const votes = votesState[0];
+  const setVotes = votesState[1];
 
-  const handleVote = (type: VoteType) => {
-    setVotes((previousVotes) => ({
-      ...previousVotes,
-      [type]: previousVotes[type] + 1,
-    }));
-  };
+  function handleVote(type: VoteType) {
+    setVotes(function (previousVotes) {
+      const newVotes: Votes = {
+        good: previousVotes.good,
+        neutral: previousVotes.neutral,
+        bad: previousVotes.bad,
+      };
 
-  const resetVotes = () => {
+      if (type === 'good') {
+        newVotes.good = newVotes.good + 1;
+      }
+
+      if (type === 'neutral') {
+        newVotes.neutral = newVotes.neutral + 1;
+      }
+
+      if (type === 'bad') {
+        newVotes.bad = newVotes.bad + 1;
+      }
+
+      return newVotes;
+    });
+  }
+
+  function resetVotes() {
     setVotes({ good: 0, neutral: 0, bad: 0 });
-  };
+  }
 
   const totalVotes = votes.good + votes.neutral + votes.bad;
-  const positiveRate = totalVotes
-    ? Math.round((votes.good / totalVotes) * 100)
-    : 0;
+  let positiveRate = 0;
+
+  if (totalVotes > 0) {
+    positiveRate = Math.round((votes.good / totalVotes) * 100);
+  }
 
   return (
     <div className={css.app}>
